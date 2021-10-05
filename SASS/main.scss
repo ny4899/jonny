@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//=======================
+$white: #ffffff;
+$black: #000000;
+$gray: gray;
+$nav_height: 50px;
+//=======================
+@mixin centerFlex($dirc) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $dirc;
+}
+//=======================
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $black;
+  color: $white;
+  font-family: "Montserrat", sans-serif;
+}
+//--------- CSS for header full screen starts ---------
+header {
+  position: sticky;
+  width: 100%;
+  height: $nav_height;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba($color: $white, $alpha: 0.1);
+  transition: all 0.3s;
+  z-index: 100;
+  .header_left_box {
+    width: 50px;
+    height: 100%;
+    @include centerFlex(row);
+    i {
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+  .header_right_box {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+      text-decoration: none;
+      color: $white;
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+//--------- CSS for header full screen ends ---------
+//--------- CSS for side nav full screen starts ---------
+.side_nav_container {
+  position: fixed;
+  top: 0;
+  width: 150px;
+  height: 100vh;
+  background-color: $black;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+.side_nav_container_hide {
+  left: -150px;
+}
+.side_nav_container_show {
+  left: 0;
+}
+.side_nav_container_inner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $white, $alpha: 0.1);
+  .cross_box {
+    width: 100%;
+    height: $nav_height;
+    .cross_box_inner {
+      width: 50px;
+      height: 100%;
+      @include centerFlex(row);
+      i {
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  .link_container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      width: 100%;
+      @include centerFlex(row);
+      text-decoration: unset;
+      padding: 20px 0;
+      transition: all 0.3s;
+      &:hover {
+        background-color: rgba($color: $white, $alpha: 0.3);
+      }
+
+      i {
+        text-align: center;
+        font-size: 35px;
+        color: $white;
+        &::after {
+          display: block;
+          font-size: 16px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+      }
+      .fa-home::after {
+        content: "HOME";
+      }
+      .fa-user::after {
+        content: "ABOUT";
+      }
+      .fa-images::after {
+        content: "PICTURES";
+      }
+      .fa-address-book::after {
+        content: "CONTACT";
+      }
+    }
+  }
+}
+//--------- CSS for side nav full screen ends ---------
+//--------- CSS for main Heading full screen starts ---------
+.main_heading_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
+  }
+}
+//--------- CSS for main Heading full screen ends ---------
+//--------- CSS for main image full screen starts ---------
+.main_img {
+  width: 100%;
+}
+//--------- CSS for main image full screen ends ---------
+//--------- CSS for about main container full screen starts ---------
+.about_main_container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  h1 {
+    font-size: 40px;
+    padding: 5px 0;
+    margin: 25px 0;
+    border-bottom: 2px solid $gray;
+  }
+  p {
+    text-align: justify;
+    color: $gray;
+  }
+  h2 {
+    padding: 15px 0;
+    font-size: 16px;
+    color: $gray;
+  }
+  .skill_bar {
+    width: 100%;
+    height: 30px;
+    background-color: $gray;
+  }
+  .photography_skill {
+    width: 90%;
+    height: 100%;
+    background-color: $white;
+  }
+  .Designing_skill {
+    width: 80%;
+    height: 100%;
+    background-color: $white;
+  }
+  .Photoshop_skill {
+    width: 70%;
+    height: 100%;
+    background-color: $white;
+  }
+  a {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid $white;
+    color: $white;
+    text-decoration: unset;
+    margin: 40px 0;
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgba($color: $white, $alpha: 0.3);
+    }
+  }
+}
+//--------- CSS for about main container full screen ends ---------
+//--------- CSS for picture main container full screen starts ---------
+.picture_main_container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  h1 {
+    font-size: 40px;
+    padding: 5px 0;
+    margin: 25px 0;
+    border-bottom: 2px solid $gray;
+  }
+  .main_picture_inner_container {
+    width: 100%;
+    display: flex;
+    .picture_container {
+      width: 50%;
+      img {
+        display: block;
+        margin: 2% auto;
+        width: 98%;
+        border: 2px solid $gray;
+      }
+    }
+  }
+}
+//--------- CSS for picture main container full screen ends ---------
+//--------- CSS for contact main container full screen starts ---------
+.contact_main_container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  h1 {
+    font-size: 40px;
+    padding: 5px 0;
+    margin: 25px 0;
+    border-bottom: 2px solid $gray;
+  }
+  p {
+    color: $gray;
+    margin: 30px 0;
+    font-size: 20px;
+    i {
+      color: $gray;
+      margin-right: 5px;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 70px;
+    word-spacing: 5px;
+  }
+  form {
+    input {
+      padding: 10px 20px;
+      background-color: $white;
+      margin: 30px 0;
+      width: 100%;
+      display: block;
+      border: unset;
+      font-size: 18px;
+    }
+    .submit_width {
+      width: max-content !important;
+      cursor: pointer;
+      &:hover {
+        background-color: $gray;
+      }
+    }
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+  }
+}
+//--------- CSS for contact main container full screen ends ---------
+footer {
+  border-top: 2px solid $gray;
+  p {
+    margin: 20px 0;
+    padding: 0 15px;
+    color: $gray;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 576px) {
+  //--------- CSS for main Heading small screen starts ---------
+  .main_heading_container {
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  //--------- CSS for main Heading small screen ends ---------
+
+  //--------- CSS for about main container small screen starts ---------
+  .about_main_container {
+    h1 {
+      font-size: 25px;
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+  //--------- CSS for about main container full screen ends ---------
+  //--------- CSS for picture main container small screen starts ---------
+  .picture_main_container {
+    h1 {
+      font-size: 25px;
+    }
+    .main_picture_inner_container {
+      flex-direction: column;
+      .picture_container {
+        width: 100%;
+      }
+    }
+  }
+  //--------- CSS for picture main container small screen ends ---------
+
+  //--------- CSS for contact main container small screen starts ---------
+  .contact_main_container {
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 25px;
+    }
+    form {
+      input {
+        font-size: 16px;
+      }
+    }
+  }
+  //--------- CSS for contact main container full screen ends ---------
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jonny</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="SASS/main.css" />
+    <link rel="stylesheet" href="webfonts/all.css" />
+  </head>
+  <body>
+    <header id="myNav">
+      <div class="header_left_box">
+        <i
+          id="hum"
+          onclick="mob_nav_hide_visible(check)"
+          class="fas fa-bars"
+        ></i>
+      </div>
+      <div class="header_right_box">
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+        <a><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </header>
+    <!-- side nav code starts  -->
+    <div class="side_nav_container side_nav_container_hide">
+      <div class="side_nav_container_inner">
+        <div class="cross_box">
+          <div class="cross_box_inner">
+            <i
+              id="cross"
+              onclick="mob_nav_hide_visible(check)"
+              class="fas fa-times"
+            ></i>
+          </div>
+        </div>
+        <div class="link_container">
+          <a href="#mainHeading" onclick="mob_nav_hide_visible(check)"
+            ><i class="fas fa-home"></i
+          ></a>
+          <a href="#aboutMe" onclick="mob_nav_hide_visible(check)"
+            ><i class="fas fa-user"></i
+          ></a>
+          <a href="#myPicture" onclick="mob_nav_hide_visible(check)"
+            ><i class="far fa-images"></i
+          ></a>
+          <a href="#myContact" onclick="mob_nav_hide_visible(check)"
+            ><i class="fas fa-address-book"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!-- side nav code ends  -->
+    <!-- main_heading_container code starts  -->
+    <div id="mainHeading" class="main_heading_container">
+      <h1>I'm jonny</h1>
+      <p>Photographer and Designer.</p>
+    </div>
+    <!-- main_heading_container code ends  -->
+    <!-- main image starts  -->
+    <img class="main_img" src="SASS/images/men1.jpg" alt="" />
+    <!-- main image ends  -->
+    <!-- about section starts  -->
+    <div id="aboutMe" class="about_main_container">
+      <h1>Here is who i'm & what i do.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quibusdam
+        totam optio atque temporibus fugit eaque quisquam, ab magni ipsum
+        cupiditate voluptates nam fuga quidem aperiam. Beatae corrupti, alias,
+        tempora impedit fuga nostrum fugiat expedita eos consequatur, ipsam
+        magni consequuntur commodi voluptas recusandae quae repudiandae nihil
+        esse quaerat a ratione quia odio rerum omnis! Quisquam, exercitationem.
+        Fugiat animi, eum modi sequi doloremque porro commodi vitae soluta
+        dolorem. Repudiandae praesentium hic pariatur. Quasi deserunt, corporis
+        minus dicta voluptate soluta itaque fuga quisquam ratione error porro
+        officia qui cupiditate! Tempora non laborum quos libero. Dolor
+        architecto aut neque. Eius voluptatem totam sint.
+      </p>
+      <h1>My Skills</h1>
+      <h2>photography</h2>
+      <div class="skill_bar">
+        <div class="photography_skill"></div>
+      </div>
+      <h2>Designing</h2>
+
+      <div class="skill_bar"><div class="Designing_skill"></div></div>
+      <h2>Photoshop</h2>
+
+      <div class="skill_bar"><div class="Photoshop_skill"></div></div>
+      <a>DOWNLOAD RESUME</a>
+    </div>
+    <!-- about section ends  -->
+    <!-- picture section starts  -->
+    <div id="myPicture" class="picture_main_container">
+      <h1>My Pictures</h1>
+      <div class="main_picture_inner_container">
+        <div class="picture_container">
+          <img src="SASS/images/picture1.jpg" alt="" />
+          <img src="SASS/images/picture2.jpg" alt="" />
+          <img src="SASS/images/men1.jpg" alt="" />
+          <!-- <img src="SASS/images/picture3.jpg" alt="" /> -->
+        </div>
+        <div class="picture_container">
+          <img src="SASS/images/picture4.jpg" alt="" />
+          <img src="SASS/images/picture5.jpg" alt="" />
+          <img src="SASS/images/picture6.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- picture section ends  -->
+    <!-- contact section stars  -->
+    <div id="myContact" class="contact_main_container">
+      <h1>Contact</h1>
+
+      <p><i class="fas fa-map-marker-alt"></i> New Delhi ,India</p>
+      <p><i class="fas fa-phone-alt"></i> 0001+ 22332234</p>
+
+      <p><i class="fas fa-envelope"></i> jonnyAA7788@info.com</p>
+      <h2>Let's get in touch</h2>
+      <form>
+        <input type="text" placeholder="Enter your Name" />
+        <input type="email" placeholder="Enter your email" />
+        <input type="text" placeholder="Subject" />
+        <input type="text" placeholder="Message" />
+        <input class="submit_width" type="button" value="Send Message" />
+      </form>
+    </div>
+    <!-- contact section ends  -->
+    <footer>
+      <p>Design and created by Neelesh yadav</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
